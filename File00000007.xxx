@@ -1,0 +1,7 @@
+[Misc]
+UpgradeRefundRate=1.0
+ConstructionRefundRate=1.0
+TradingIncLarge=500
+BoneDecayTime=10.0
+FoodCeiling=300
+

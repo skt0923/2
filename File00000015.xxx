@@ -1,0 +1,1673 @@
+globals
+constant boolean LIBRARY_YDWEGetPlayersAlliesNull=true
+force yd_NullTempForce
+constant boolean LIBRARY_YDWEGetPlayersMatchingNull=true
+constant boolean LIBRARY_YDWEGetUnitsInRectMatchingNull=true
+group yd_NullTempGroup
+constant boolean LIBRARY_YDWEGetUnitsInRectOfPlayerNull=true
+constant boolean LIBRARY_YDWEGetUnitsOfPlayerAndTypeIdNull=true
+constant boolean LIBRARY_YDWEGetUnitsOfPlayerMatchingNull=true
+constant boolean LIBRARY_YDWEPlaySoundNull=true
+constant boolean LIBRARY_YDWETriggerRegisterEnterRectSimpleNull=true
+region yd_NullTempRegion
+constant boolean LIBRARY_YDWEGetUnitsInRectAllNull=true
+constant boolean LIBRARY_YDWEGetUnitsOfPlayerAllNull=true
+integer udg_SG1=0
+integer udg_SG6=0
+integer udg_SG2=0
+integer udg_SG3=0
+integer udg_SG4=0
+integer udg_SG5=0
+leaderboard udg_phb=null
+integer udg_KJ=0
+real udg_K_sxg=0
+real udg_K_bsjl=0
+real udg_K_jrc=0
+real udg_K_ws=0
+dialog udg_duiHK1=null
+button array udg_duiHKs1
+integer udg_SL=0
+force udg_nozidong=null
+integer udg_Weather_C=0
+integer array udg_Weather_B
+integer array udg_Weather_A
+rect udg_Point_ALL=null
+integer udg_time=0
+boolean array udg_Open
+rect gg_rct_ALL=null
+rect gg_rct______________003=null
+rect gg_rct_______u=null
+rect gg_rct_Play_ALL=null
+rect gg_rct_Show=null
+rect gg_rct_Go=null
+sound gg_snd_DaybreakRooster=null
+trigger gg_trg_Map_Initialization=null
+trigger gg_trg_Leave=null
+trigger gg_trg_Win=null
+trigger gg_trg_End=null
+trigger gg_trg_Sound=null
+trigger gg_trg_Huan=null
+trigger gg_trg_Map_Random=null
+trigger gg_trg_Map_Weather=null
+trigger gg_trg_G=null
+trigger gg_trg_______________u=null
+trigger gg_trg_One=null
+trigger gg_trg_Select=null
+trigger gg_trg__________________u=null
+trigger gg_trg_1_________u=null
+trigger gg_trg_2__________u=null
+trigger gg_trg_3_________u=null
+trigger gg_trg_4_________u=null
+trigger gg_trg_5_________u=null
+trigger gg_trg_6_________u=null
+trigger gg_trg_Move=null
+trigger gg_trg_Lv1=null
+trigger gg_trg_Lv2=null
+trigger gg_trg_Lv3=null
+trigger gg_trg_Hero_1=null
+trigger gg_trg_Hero_2=null
+trigger gg_trg_Lv4=null
+trigger gg_trg_Lv5=null
+trigger gg_trg_Lv6=null
+trigger gg_trg_Lv7=null
+trigger gg_trg_Lv11=null
+trigger gg_trg_Lv22=null
+trigger gg_trg_Lv33=null
+trigger gg_trg_Hero_11=null
+trigger gg_trg_Hero_22=null
+trigger gg_trg_Lv44=null
+trigger gg_trg_Lv55=null
+trigger gg_trg_Lv66=null
+trigger gg_trg_Lv77=null
+trigger gg_trg_Lv111=null
+trigger gg_trg_Lv222=null
+trigger gg_trg_Lv333=null
+trigger gg_trg_Hero_111=null
+trigger gg_trg_Hero_222=null
+trigger gg_trg_Lv444=null
+trigger gg_trg_Lv555=null
+trigger gg_trg_Lv666=null
+trigger gg_trg_Lv777=null
+trigger gg_trg_Time=null
+trigger gg_trg____________________006=null
+trigger gg_trg____________________u=null
+trigger gg_trg___________________u=null
+trigger gg_trg_footman=null
+trigger gg_trg_biubiu=null
+trigger gg_trg_LVfootman=null
+trigger gg_trg_knight=null
+trigger gg_trg_dragon_knight=null
+trigger gg_trg_archer=null
+trigger gg_trg_gimira=null
+trigger gg_trg_large_of_hill=null
+trigger gg_trg_no_AI=null
+trigger gg_trg_attack=null
+trigger gg_trg_jihe=null
+unit gg_unit_usep_0148=null
+unit gg_unit_usep_0002=null
+unit gg_unit_ugrv_0003=null
+unit gg_unit_utod_0005=null
+unit gg_unit_utod_0006=null
+unit gg_unit_ubon_0007=null
+unit gg_unit_uslh_0008=null
+unit gg_unit_uslh_0001=null
+unit gg_unit_htow_0055=null
+unit gg_unit_htow_0056=null
+unit gg_unit_htow_0057=null
+unit gg_unit_htow_0058=null
+unit gg_unit_usep_0147=null
+unit gg_unit_htow_0029=null
+unit gg_unit_unp2_0000=null
+unit gg_unit_ubon_0015=null
+endglobals
+function YDWEGetPlayersAlliesNull takes player whichPlayer returns force
+local force f=CreateForce()
+call ForceEnumAllies(f,whichPlayer,null)
+set yd_NullTempForce=f
+set f=null
+return yd_NullTempForce
+endfunction
+function YDWEGetPlayersMatchingNull takes boolexpr filter returns force
+local force f=CreateForce()
+call ForceEnumPlayers(f,filter)
+call DestroyBoolExpr(filter)
+set yd_NullTempForce=f
+set f=null
+return yd_NullTempForce
+endfunction
+function YDWEGetUnitsInRectMatchingNull takes rect r,boolexpr filter returns group
+local group g=CreateGroup()
+call GroupEnumUnitsInRect(g,r,filter)
+call DestroyBoolExpr(filter)
+set yd_NullTempGroup=g
+set g=null
+return yd_NullTempGroup
+endfunction
+function YDWEGetUnitsInRectOfPlayerNull takes rect r,player whichPlayer returns group
+local group g=CreateGroup()
+set bj_groupEnumOwningPlayer=whichPlayer
+call GroupEnumUnitsInRect(g,r,filterGetUnitsInRectOfPlayer)
+set yd_NullTempGroup=g
+set g=null
+return yd_NullTempGroup
+endfunction
+function YDWEGetUnitsOfPlayerAndTypeIdNull takes player whichPlayer,integer unitid returns group
+local group g=CreateGroup()
+set bj_groupEnumTypeId=unitid
+call GroupEnumUnitsOfPlayer(g,whichPlayer,filterGetUnitsOfPlayerAndTypeId)
+set yd_NullTempGroup=g
+set g=null
+return yd_NullTempGroup
+endfunction
+function YDWEGetUnitsOfPlayerMatchingNull takes player whichPlayer,boolexpr filter returns group
+local group g=CreateGroup()
+call GroupEnumUnitsOfPlayer(g,whichPlayer,filter)
+call DestroyBoolExpr(filter)
+set yd_NullTempGroup=g
+set g=null
+return yd_NullTempGroup
+endfunction
+function YDWEPlaySoundNull takes string soundName returns nothing
+local sound soundHandle=CreateSound(soundName,false,false,true,12700,12700,"")
+call StartSound(soundHandle)
+call KillSoundWhenDone(soundHandle)
+set soundHandle=null
+endfunction
+function YDWETriggerRegisterEnterRectSimpleNull takes trigger trig,rect r returns event
+local region rectRegion=CreateRegion()
+call RegionAddRect(rectRegion,r)
+set yd_NullTempRegion=rectRegion
+set rectRegion=null
+return TriggerRegisterEnterRegion(trig,yd_NullTempRegion,null)
+endfunction
+function YDWEGetUnitsInRectAllNull takes rect r returns group
+return YDWEGetUnitsInRectMatchingNull(r,null)
+endfunction
+function YDWEGetUnitsOfPlayerAllNull takes player whichPlayer returns group
+return YDWEGetUnitsOfPlayerMatchingNull(whichPlayer,null)
+endfunction
+function InitGlobals takes nothing returns nothing
+local integer i=0
+set udg_SG1=0
+set udg_SG6=0
+set udg_SG2=0
+set udg_SG3=0
+set udg_SG4=0
+set udg_SG5=0
+set udg_KJ=1
+set udg_K_sxg=0
+set udg_K_bsjl=0
+set udg_K_jrc=0
+set udg_K_ws=0
+set udg_duiHK1=DialogCreate()
+set udg_SL=0
+set udg_nozidong=CreateForce()
+set udg_Weather_C=0
+set i=0
+loop
+exitwhen(i>1)
+set udg_Weather_B[i]=0
+set i=i+1
+endloop
+set i=0
+loop
+exitwhen(i>1)
+set udg_Weather_A[i]=0
+set i=i+1
+endloop
+set udg_time=0
+set i=0
+loop
+exitwhen(i>6)
+set udg_Open[i]=false
+set i=i+1
+endloop
+endfunction
+function InitSounds takes nothing returns nothing
+set gg_snd_DaybreakRooster=CreateSound("Sound\\Time\\DaybreakRooster.wav",false,false,false,10,10,"DefaultEAXON")
+call SetSoundParamsFromLabel(gg_snd_DaybreakRooster,"RoosterSound")
+call SetSoundDuration(gg_snd_DaybreakRooster,2935)
+endfunction
+function CreateBuildingsForPlayer0 takes nothing returns nothing
+local player p=Player(0)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set u=CreateUnit(p,'hgtw',-448.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',448.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',-320.0,-4992.0,270.000)
+set u=CreateUnit(p,'harm',640.0,-4608.0,270.000)
+set u=CreateUnit(p,'h007',-64.0,-4992.0,270.000)
+set gg_unit_htow_0029=CreateUnit(p,'htow',-64.0,-4480.0,270.000)
+set u=CreateUnit(p,'hbla',-704.0,-4672.0,270.000)
+set u=CreateUnit(p,'hgtw',192.0,-4992.0,270.000)
+set u=CreateUnit(p,'hgtw',-448.0,-3520.0,270.000)
+set u=CreateUnit(p,'hgtw',448.0,-3520.0,270.000)
+endfunction
+function CreateBuildingsForPlayer1 takes nothing returns nothing
+local player p=Player(1)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set u=CreateUnit(p,'hgtw',-2368.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',-1472.0,-3392.0,270.000)
+set gg_unit_htow_0057=CreateUnit(p,'htow',-2048.0,-4416.0,270.000)
+set u=CreateUnit(p,'hbla',-2688.0,-4608.0,270.000)
+set u=CreateUnit(p,'harm',-1408.0,-4544.0,270.000)
+set u=CreateUnit(p,'hgtw',-2304.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',-2368.0,-3520.0,270.000)
+set u=CreateUnit(p,'hgtw',-1472.0,-3520.0,270.000)
+set u=CreateUnit(p,'h007',-2048.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',-1792.0,-4928.0,270.000)
+endfunction
+function CreateBuildingsForPlayer2 takes nothing returns nothing
+local player p=Player(2)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set u=CreateUnit(p,'hgtw',-4544.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',-3648.0,-3392.0,270.000)
+set gg_unit_htow_0058=CreateUnit(p,'htow',-4096.0,-4416.0,270.000)
+set u=CreateUnit(p,'hbla',-4736.0,-4608.0,270.000)
+set u=CreateUnit(p,'harm',-3456.0,-4544.0,270.000)
+set u=CreateUnit(p,'hgtw',-4544.0,-3520.0,270.000)
+set u=CreateUnit(p,'hgtw',-4352.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',-3648.0,-3520.0,270.000)
+set u=CreateUnit(p,'h007',-4096.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',-3840.0,-4928.0,270.000)
+endfunction
+function CreateBuildingsForPlayer3 takes nothing returns nothing
+local player p=Player(3)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set u=CreateUnit(p,'hgtw',1600.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',2496.0,-3392.0,270.000)
+set gg_unit_htow_0056=CreateUnit(p,'htow',2048.0,-4416.0,270.000)
+set u=CreateUnit(p,'hbla',1344.0,-4608.0,270.000)
+set u=CreateUnit(p,'harm',2688.0,-4608.0,270.000)
+set u=CreateUnit(p,'hgtw',1792.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',1600.0,-3520.0,270.000)
+set u=CreateUnit(p,'hgtw',2496.0,-3520.0,270.000)
+set u=CreateUnit(p,'h007',2048.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',2304.0,-4928.0,270.000)
+endfunction
+function CreateBuildingsForPlayer4 takes nothing returns nothing
+local player p=Player(4)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set u=CreateUnit(p,'hgtw',3648.0,-3392.0,270.000)
+set u=CreateUnit(p,'hgtw',4544.0,-3392.0,270.000)
+set u=CreateUnit(p,'hbla',3456.0,-4608.0,270.000)
+set gg_unit_htow_0055=CreateUnit(p,'htow',4096.0,-4416.0,270.000)
+set u=CreateUnit(p,'harm',4800.0,-4544.0,270.000)
+set u=CreateUnit(p,'hgtw',3840.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',3648.0,-3520.0,270.000)
+set u=CreateUnit(p,'hgtw',4544.0,-3520.0,270.000)
+set u=CreateUnit(p,'h007',4096.0,-4928.0,270.000)
+set u=CreateUnit(p,'hgtw',4352.0,-4928.0,270.000)
+endfunction
+function CreateBuildingsForPlayer5 takes nothing returns nothing
+local player p=Player(5)
+local unit u
+local integer unitID
+local trigger t
+local real life
+set gg_unit_unp2_0000=CreateUnit(p,'unp2',128.0,8384.0,270.000)
+set gg_unit_uslh_0001=CreateUnit(p,'uslh',1280.0,6528.0,270.000)
+set gg_unit_usep_0002=CreateUnit(p,'usep',64.0,5760.0,270.000)
+set gg_unit_ugrv_0003=CreateUnit(p,'ugrv',128.0,7360.0,270.000)
+set gg_unit_utod_0005=CreateUnit(p,'utod',1216.0,5760.0,270.000)
+set gg_unit_utod_0006=CreateUnit(p,'utod',-1024.0,5824.0,270.000)
+set gg_unit_ubon_0007=CreateUnit(p,'ubon',1536.0,7296.0,270.000)
+set gg_unit_uslh_0008=CreateUnit(p,'uslh',-960.0,6528.0,270.000)
+set u=CreateUnit(p,'uzg1',-928.0,4320.0,270.000)
+set u=CreateUnit(p,'uzg1',-1696.0,6752.0,270.000)
+set u=CreateUnit(p,'uzg1',2080.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg1',-352.0,7328.0,270.000)
+set u=CreateUnit(p,'uzg1',672.0,7328.0,270.000)
+set gg_unit_ubon_0015=CreateUnit(p,'ubon',-1088.0,7296.0,270.000)
+set u=CreateUnit(p,'uzg2',-352.0,7904.0,270.000)
+set u=CreateUnit(p,'uzg1',96.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg1',-96.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg2',544.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg2',-288.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg1',-1184.0,4320.0,270.000)
+set u=CreateUnit(p,'uzg1',-2656.0,4384.0,270.000)
+set u=CreateUnit(p,'uzg1',992.0,4320.0,270.000)
+set u=CreateUnit(p,'uzg1',1248.0,4320.0,270.000)
+set u=CreateUnit(p,'uzg1',2912.0,4320.0,270.000)
+set u=CreateUnit(p,'uzg2',992.0,4512.0,270.000)
+set u=CreateUnit(p,'uzg2',1248.0,4512.0,270.000)
+set u=CreateUnit(p,'uzg2',992.0,4704.0,270.000)
+set u=CreateUnit(p,'uzg2',1248.0,4704.0,270.000)
+set u=CreateUnit(p,'uzg2',-928.0,4512.0,270.000)
+set u=CreateUnit(p,'uzg2',-1184.0,4512.0,270.000)
+set u=CreateUnit(p,'uzg2',-1184.0,4704.0,270.000)
+set u=CreateUnit(p,'uzg2',-928.0,4704.0,270.000)
+set u=CreateUnit(p,'uzg2',-2656.0,4576.0,270.000)
+set u=CreateUnit(p,'uzg2',-2656.0,4768.0,270.000)
+set u=CreateUnit(p,'uzg2',2912.0,4512.0,270.000)
+set u=CreateUnit(p,'uzg2',2912.0,4704.0,270.000)
+set u=CreateUnit(p,'uzg1',-2400.0,5856.0,270.000)
+set u=CreateUnit(p,'uzg1',-1696.0,6368.0,270.000)
+set u=CreateUnit(p,'uzg1',288.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg1',2592.0,5728.0,270.000)
+set u=CreateUnit(p,'uzg1',2080.0,6752.0,270.000)
+set u=CreateUnit(p,'uzg2',672.0,7904.0,270.000)
+set u=CreateUnit(p,'uzg1',-1696.0,6560.0,270.000)
+set u=CreateUnit(p,'uzg1',2080.0,6368.0,270.000)
+set u=CreateUnit(p,'uzg1',-416.0,8608.0,270.000)
+set u=CreateUnit(p,'uzg1',608.0,8608.0,270.000)
+set u=CreateUnit(p,'uzg1',160.0,7904.0,270.000)
+set u=CreateUnit(p,'unpl',-1472.0,8448.0,270.000)
+set u=CreateUnit(p,'unp1',1920.0,8448.0,270.000)
+set gg_unit_usep_0147=CreateUnit(p,'usep',-1856.0,5504.0,270.000)
+set gg_unit_usep_0148=CreateUnit(p,'usep',2112.0,5440.0,270.000)
+endfunction
+function CreatePlayerBuildings takes nothing returns nothing
+call CreateBuildingsForPlayer0()
+call CreateBuildingsForPlayer1()
+call CreateBuildingsForPlayer2()
+call CreateBuildingsForPlayer3()
+call CreateBuildingsForPlayer4()
+call CreateBuildingsForPlayer5()
+endfunction
+function CreatePlayerUnits takes nothing returns nothing
+endfunction
+function CreateAllUnits takes nothing returns nothing
+call CreatePlayerBuildings()
+call CreatePlayerUnits()
+endfunction
+function CreateRegions takes nothing returns nothing
+local weathereffect we
+set gg_rct_ALL=Rect(-3008.0,3808.0,3232.0,8768.0)
+set gg_rct______________003=Rect(-128.0,7904.0,192.0,8064.0)
+set gg_rct_______u=Rect(-352.0,1888.0,544.0,2848.0)
+set gg_rct_Play_ALL=Rect(-4448.0,-4768.0,4544.0,-4160.0)
+set gg_rct_Show=Rect(-5248.0,-5536.0,5632.0,-224.0)
+set gg_rct_Go=Rect(-5152.0,-5408.0,5440.0,-3008.0)
+endfunction
+function Trig_Map_InitializationFunc004A takes nothing returns nothing
+call CreateFogModifierRectBJ(true,GetEnumPlayer(),FOG_OF_WAR_VISIBLE,gg_rct_Show)
+call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY,true,GetEnumPlayer())
+call SetPlayerStateBJ(GetEnumPlayer(),PLAYER_STATE_RESOURCE_GOLD,300)
+endfunction
+function Trig_Map_InitializationFunc005Func001002002 takes nothing returns nothing
+call RemoveUnit(GetEnumUnit())
+endfunction
+function Trig_Map_InitializationActions takes nothing returns nothing
+call FogMaskEnableOn()
+call FogEnableOn()
+call SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES,true)
+call ForForce(GetPlayersAll(),function Trig_Map_InitializationFunc004A)
+set bj_forLoopAIndex=1
+set bj_forLoopAIndexEnd=5
+loop
+exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd
+if((GetPlayerSlotState(ConvertedPlayer(bj_forLoopAIndex))!=PLAYER_SLOT_STATE_PLAYING))then
+call ForGroupBJ((YDWEGetUnitsOfPlayerMatchingNull((ConvertedPlayer(bj_forLoopAIndex)),null)),function Trig_Map_InitializationFunc005Func001002002)
+else
+call DoNothing()
+endif
+set bj_forLoopAIndex=bj_forLoopAIndex+1
+endloop
+set udg_Point_ALL=GetEntireMapRect()
+call TriggerExecute(gg_trg_Map_Weather)
+call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+function InitTrig_Map_Initialization takes nothing returns nothing
+set gg_trg_Map_Initialization=CreateTrigger()
+call TriggerAddAction(gg_trg_Map_Initialization,function Trig_Map_InitializationActions)
+endfunction
+function Trig_LeaveFunc002Func001002002 takes nothing returns nothing
+call RemoveUnit(GetEnumUnit())
+endfunction
+function Trig_LeaveFunc003001001 takes nothing returns boolean
+return((IsPlayerAlly(GetFilterPlayer(),GetTriggerPlayer())==true))
+endfunction
+function Trig_LeaveFunc003A takes nothing returns nothing
+call SetPlayerTaxRate(GetTriggerPlayer(),GetEnumPlayer(),PLAYER_STATE_RESOURCE_GOLD,100)
+call SetPlayerTaxRate(GetTriggerPlayer(),GetEnumPlayer(),PLAYER_STATE_RESOURCE_LUMBER,100)
+endfunction
+function Trig_LeaveActions takes nothing returns nothing
+call RemoveUnit(GetEnumUnit())
+set bj_forLoopAIndex=1
+set bj_forLoopAIndexEnd=5
+loop
+exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd
+if((GetPlayerSlotState(ConvertedPlayer(bj_forLoopAIndex))!=PLAYER_SLOT_STATE_PLAYING))then
+call ForGroupBJ((YDWEGetUnitsOfPlayerMatchingNull((ConvertedPlayer(bj_forLoopAIndex)),null)),function Trig_LeaveFunc002Func001002002)
+else
+call DoNothing()
+endif
+set bj_forLoopAIndex=bj_forLoopAIndex+1
+endloop
+call ForForce(YDWEGetPlayersMatchingNull(Condition(function Trig_LeaveFunc003001001)),function Trig_LeaveFunc003A)
+endfunction
+function InitTrig_Leave takes nothing returns nothing
+set gg_trg_Leave=CreateTrigger()
+call TriggerRegisterPlayerEventLeave(gg_trg_Leave,Player(0))
+call TriggerRegisterPlayerEventLeave(gg_trg_Leave,Player(1))
+call TriggerRegisterPlayerEventLeave(gg_trg_Leave,Player(2))
+call TriggerRegisterPlayerEventLeave(gg_trg_Leave,Player(3))
+call TriggerRegisterPlayerEventLeave(gg_trg_Leave,Player(4))
+call TriggerAddAction(gg_trg_Leave,function Trig_LeaveActions)
+endfunction
+function Trig_WinFunc005002 takes nothing returns nothing
+call CustomVictoryBJ(GetEnumPlayer(),true,false)
+endfunction
+function Trig_WinActions takes nothing returns nothing
+call DisplayTimedTextToForce(GetPlayersAll(),30.00,"|cFFFF0000恭|r|cFF0041FF喜|r|cFF1BE6B8你|r|cFF530080胜|r|cFFFFFF00利|r|cFFFE9FD8了|r|cFF1FBF00！|r|cFFE55AAF！|r|cFF949596！|r")
+call TriggerSleepAction(3.00)
+call DisplayTimedTextToForce(GetPlayersAll(),5.00,"|cFFFF0000游|r|cFF802080戏|r|cFF0041FF将|r|cFF0E94DC在|r|cFF1BE6B83|r|cFF37739C0|r|cFF530080秒|r|cFFA98040后|r|cFFFFFF00退|r|cFFFECF6C出|r|cFFFE9FD8！|r|cFF8EAF6C！|r|cFF1FBF00！|r")
+call TriggerSleepAction(30.00)
+call ForForce(YDWEGetPlayersAlliesNull(Player(0)),function Trig_WinFunc005002)
+endfunction
+function InitTrig_Win takes nothing returns nothing
+set gg_trg_Win=CreateTrigger()
+call TriggerRegisterUnitEvent(gg_trg_Win,gg_unit_unp2_0000,EVENT_UNIT_DEATH)
+call TriggerAddAction(gg_trg_Win,function Trig_WinActions)
+endfunction
+function Trig_EndConditions takes nothing returns boolean
+return((GetUnitTypeId(GetTriggerUnit())=='htow'))
+endfunction
+function Trig_EndActions takes nothing returns nothing
+call EnableTrigger(gg_trg_Huan)
+call DisplayTimedTextToForce(GetPlayersAll(),30.00,(GetPlayerName(GetTriggerPlayer())+" |cFFFF0033的|r|cFFF90330基|r|cFFF3062D地|r|cFFED092A给|r|cFFE70C27秒|r|cFFE10F24了|r|cFFDB1221，|r|cFFD5151E真|r|cFFCF181B可|r|cFFC91B18怜|r|cFFC31E15.|r|cFFBD2112.|r|cFFB7240F.|r|cFFB1270C.|r|cFFAB2A09.|r|cFFA52D06.|r"))
+endfunction
+function InitTrig_End takes nothing returns nothing
+set gg_trg_End=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_End,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_End,Condition(function Trig_EndConditions))
+call TriggerAddAction(gg_trg_End,function Trig_EndActions)
+endfunction
+function Trig_SoundActions takes nothing returns nothing
+call StopMusic(true)
+call ClearMapMusic()
+call PlaySoundBJ(gg_snd_DaybreakRooster)
+call TriggerSleepAction(5.00)
+call PlaySoundBJ(gg_snd_DaybreakRooster)
+call TriggerSleepAction(5.00)
+call PlaySoundBJ(gg_snd_DaybreakRooster)
+call TriggerSleepAction(5.00)
+call PlayThematicMusic("Sound\\Music\\mp3Music\\LichKingTheme.mp3")
+call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+function InitTrig_Sound takes nothing returns nothing
+set gg_trg_Sound=CreateTrigger()
+call TriggerRegisterTimerEventSingle(gg_trg_Sound,1.00)
+call TriggerAddAction(gg_trg_Sound,function Trig_SoundActions)
+endfunction
+function Trig_HuanConditions takes nothing returns boolean
+return((GetOwningPlayer(GetTriggerUnit())==Player(5)))
+endfunction
+function Trig_HuanActions takes nothing returns nothing
+call IssuePointOrderLoc(GetTriggerUnit(),"attack",GetPlayerStartLocationLoc(ForcePickRandomPlayer(YDWEGetPlayersAlliesNull(Player(0)))))
+endfunction
+function InitTrig_Huan takes nothing returns nothing
+set gg_trg_Huan=CreateTrigger()
+call YDWETriggerRegisterEnterRectSimpleNull(gg_trg_Huan,gg_rct_Play_ALL)
+call TriggerAddCondition(gg_trg_Huan,Condition(function Trig_HuanConditions))
+call TriggerAddAction(gg_trg_Huan,function Trig_HuanActions)
+endfunction
+function Trig_Map_RandomActions takes nothing returns nothing
+set udg_Weather_C=7
+set bj_forLoopAIndex=1
+set bj_forLoopAIndexEnd=6
+loop
+exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd
+set udg_Weather_B[bj_forLoopAIndex]=bj_forLoopAIndex
+set bj_forLoopAIndex=bj_forLoopAIndex+1
+endloop
+set bj_forLoopAIndex=1
+set bj_forLoopAIndexEnd=6
+loop
+exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd
+set udg_Weather_B[0]=GetRandomInt(1,(udg_Weather_C-1))
+set udg_Weather_A[bj_forLoopAIndex]=udg_Weather_B[udg_Weather_B[0]]
+set udg_Weather_B[udg_Weather_B[0]]=udg_Weather_B[(udg_Weather_C-1)]
+set udg_Weather_C=(udg_Weather_C-1)
+set bj_forLoopAIndex=bj_forLoopAIndex+1
+endloop
+call DisableTrigger(GetTriggeringTrigger())
+endfunction
+function InitTrig_Map_Random takes nothing returns nothing
+set gg_trg_Map_Random=CreateTrigger()
+call TriggerAddAction(gg_trg_Map_Random,function Trig_Map_RandomActions)
+endfunction
+function Trig_Map_WeatherActions takes nothing returns nothing
+call TriggerSleepAction(35.00)
+call TriggerExecute(gg_trg_Map_Random)
+set bj_forLoopAIndex=1
+set bj_forLoopAIndexEnd=6
+loop
+exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd
+call EnableWeatherEffect(GetLastCreatedWeatherEffect(),false)
+call RemoveWeatherEffect(GetLastCreatedWeatherEffect())
+if((udg_Weather_A[bj_forLoopAIndex]==1))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'RAhr')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：下大雨啦|r")
+else
+if((udg_Weather_A[bj_forLoopAIndex]==2))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'SNbs')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：暴风雪来咯|r")
+else
+if((udg_Weather_A[bj_forLoopAIndex]==3))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'LRaa')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：今天阳光明媚哦|r")
+else
+if((udg_Weather_A[bj_forLoopAIndex]==4))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'LRma')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：月光来临|r")
+else
+if((udg_Weather_A[bj_forLoopAIndex]==5))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'FDwh')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：起雾了|r")
+else
+if((udg_Weather_A[bj_forLoopAIndex]==6))then
+call AddWeatherEffectSaveLast(udg_Point_ALL,'WOlw')
+call DisplayTimedTextToForce(GetPlayersAll(),20.00,"|cFF1FBF00天气预报：起风了|r")
+else
+endif
+endif
+endif
+endif
+endif
+endif
+call EnableWeatherEffect(GetLastCreatedWeatherEffect(),true)
+call TriggerSleepAction(150.00)
+set bj_forLoopAIndex=bj_forLoopAIndex+1
+endloop
+call TriggerExecute(gg_trg_Map_Weather)
+endfunction
+function InitTrig_Map_Weather takes nothing returns nothing
+set gg_trg_Map_Weather=CreateTrigger()
+call TriggerAddAction(gg_trg_Map_Weather,function Trig_Map_WeatherActions)
+endfunction
+function Trig_GFunc001A takes nothing returns nothing
+call IssuePointOrderLoc(GetEnumUnit(),"attack",GetPlayerStartLocationLoc(ForcePickRandomPlayer(YDWEGetPlayersAlliesNull(Player(0)))))
+endfunction
+function Trig_GActions takes nothing returns nothing
+call ForGroupBJ(YDWEGetUnitsInRectOfPlayerNull(gg_rct_Go,Player(5)),function Trig_GFunc001A)
+endfunction
+function InitTrig_G takes nothing returns nothing
+set gg_trg_G=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_G,25.00)
+call TriggerAddAction(gg_trg_G,function Trig_GActions)
+endfunction
+function Trig_______________uActions takes nothing returns nothing
+call SetPlayerTechResearchedSwap('R00L',udg_KJ,Player(5))
+call SetPlayerTechResearchedSwap('R00M',udg_KJ,Player(5))
+call SetPlayerTechResearchedSwap('R00N',udg_KJ,Player(5))
+set udg_KJ=(udg_KJ+1)
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0033敌人变强大了......|r")
+call TriggerSleepAction(20.00)
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0033地|r|cFFFF0333图|r|cFFFF0633正|r|cFFFF0933在|r|cFFFF0C33建|r|cFFFF0F33设|r|cFFFF1133中|r|cFFFF1433.|r|cFFFF1733如|r|cFFFF1A33果|r|cFFFF1D33有|r|cFFFF2033好|r|cFFFF2333的|r|cFFFF2633意|r|cFFFF2933见|r|cFFFF2C33或|r|cFFFF2F33建|r|cFFFF3233议|r|cFFFF3433 |r|cFFFF3733请|r|cFFFF3A33联|r|cFFFF3D33系|r|cFFFF4033Q|r|cFFFF4333Q|r|cFFFF4633:|r|cFFFF49335|r|cFFFF4C333|r|cFFFF4F330|r|cFFFF52330|r|cFFFF55332|r|cFFFF57336|r|cFFFF5A335|r|cFFFF5D335|r|cFFFF60331|r")
+endfunction
+function InitTrig_______________u takes nothing returns nothing
+set gg_trg_______________u=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_______________u,70.00)
+call TriggerAddAction(gg_trg_______________u,function Trig_______________uActions)
+endfunction
+function Trig_OneActions takes nothing returns nothing
+if((GetClickedButtonBJ()==udg_duiHKs1[1]))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFF1FBF00玩|r|cFF23BF0B家|r|cFF28BF161|r|cFF2CBF21 |r|cFF30BF2C选|r|cFF34BF37择|r|cFF39BF42了|r|cFF3DBF4D菜|r|cFF41BF58鸟|r|cFF45BF63难|r|cFF4ABF6E度|r|cFF4EBF78，|r|cFF52BE83所|r|cFF57BE8E有|r|cFF5BBE99敌|r|cFF5FBEA4军|r|cFF63BEAF生|r|cFF68BEBA命|r|cFF6CBEC5正|r|cFF70BED0常|r|cFF74BEDB。|r")
+else
+endif
+if((GetClickedButtonBJ()==udg_duiHKs1[2]))then
+call SetPlayerHandicap(Player(5),2.00)
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFF1FBF00玩|r|cFF23BF0B家|r|cFF28BF161|r|cFF2CBF21 |r|cFF30BF2C选|r|cFF34BF37择|r|cFF39BF42了|r|cFF3DBF4D进|r|cFF41BF58阶|r|cFF45BF63难|r|cFF4ABF6E度|r|cFF4EBF78，|r|cFF52BE83所|r|cFF57BE8E有|r|cFF5BBE99敌|r|cFF5FBEA4军|r|cFF63BEAF生|r|cFF68BEBA命|r|cFF6CBEC5加|r|cFF70BED0倍|r|cFF74BEDB。|r")
+else
+endif
+if((GetClickedButtonBJ()==udg_duiHKs1[3]))then
+call SetPlayerHandicap(Player(5),3.00)
+call EnableTrigger(gg_trg____________________006)
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0033玩家1 选择了困难难度，所有敌军生命加倍，开启随机无提示偷袭系统。|r")
+else
+endif
+call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+function InitTrig_One takes nothing returns nothing
+set gg_trg_One=CreateTrigger()
+call TriggerRegisterDialogEvent(gg_trg_One,udg_duiHK1)
+call TriggerAddAction(gg_trg_One,function Trig_OneActions)
+endfunction
+function Trig_SelectActions takes nothing returns nothing
+call DialogSetMessage(udg_duiHK1,"选择难度")
+call DialogAddButtonBJ(udg_duiHK1,"菜鸟")
+set udg_duiHKs1[1]=bj_lastCreatedButton
+call DialogAddButtonBJ(udg_duiHK1,"进阶")
+set udg_duiHKs1[2]=bj_lastCreatedButton
+call DialogAddButtonBJ(udg_duiHK1,"困难")
+set udg_duiHKs1[3]=bj_lastCreatedButton
+call DialogDisplayBJ(true,udg_duiHK1,Player(0))
+call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+function InitTrig_Select takes nothing returns nothing
+set gg_trg_Select=CreateTrigger()
+call TriggerRegisterTimerEventSingle(gg_trg_Select,0.00)
+call TriggerAddAction(gg_trg_Select,function Trig_SelectActions)
+endfunction
+function Trig__________________uActions takes nothing returns nothing
+call CreateLeaderboardBJ(GetPlayersAll(),"杀敌排行榜")
+set udg_phb=bj_lastCreatedLeaderboard
+if((GetPlayerSlotState(Player(0))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(0),GetLastCreatedLeaderboard(),GetPlayerName(Player(0)),udg_SG1)
+else
+call DoNothing()
+endif
+if((GetPlayerSlotState(Player(1))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(1),GetLastCreatedLeaderboard(),GetPlayerName(Player(1)),udg_SG2)
+else
+call DoNothing()
+endif
+if((GetPlayerSlotState(Player(2))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(2),GetLastCreatedLeaderboard(),GetPlayerName(Player(2)),udg_SG3)
+else
+call DoNothing()
+endif
+if((GetPlayerSlotState(Player(3))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(3),GetLastCreatedLeaderboard(),GetPlayerName(Player(3)),udg_SG4)
+else
+call DoNothing()
+endif
+if((GetPlayerSlotState(Player(4))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(4),GetLastCreatedLeaderboard(),GetPlayerName(Player(4)),udg_SG5)
+else
+call DoNothing()
+endif
+if((GetPlayerSlotState(Player(5))==PLAYER_SLOT_STATE_PLAYING))then
+call LeaderboardAddItemBJ(Player(5),GetLastCreatedLeaderboard(),GetPlayerName(Player(5)),udg_SG6)
+call LeaderboardAddItemBJ(Player(6),GetLastCreatedLeaderboard(),"怪数量",udg_SL)
+else
+call DoNothing()
+endif
+call LeaderboardSetStyle(GetLastCreatedLeaderboard(),true,true,true,true)
+endfunction
+function InitTrig__________________u takes nothing returns nothing
+set gg_trg__________________u=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg__________________u,1.00)
+call TriggerAddAction(gg_trg__________________u,function Trig__________________uActions)
+endfunction
+function Trig_1_________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(0)))
+endfunction
+function Trig_1_________uActions takes nothing returns nothing
+set udg_SG1=(udg_SG1+1)
+endfunction
+function InitTrig_1_________u takes nothing returns nothing
+set gg_trg_1_________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_1_________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_1_________u,Condition(function Trig_1_________uConditions))
+call TriggerAddAction(gg_trg_1_________u,function Trig_1_________uActions)
+endfunction
+function Trig_2__________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(1)))
+endfunction
+function Trig_2__________uActions takes nothing returns nothing
+set udg_SG2=(udg_SG2+1)
+endfunction
+function InitTrig_2__________u takes nothing returns nothing
+set gg_trg_2__________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_2__________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_2__________u,Condition(function Trig_2__________uConditions))
+call TriggerAddAction(gg_trg_2__________u,function Trig_2__________uActions)
+endfunction
+function Trig_3_________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(2)))
+endfunction
+function Trig_3_________uActions takes nothing returns nothing
+set udg_SG3=(udg_SG3+1)
+endfunction
+function InitTrig_3_________u takes nothing returns nothing
+set gg_trg_3_________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_3_________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_3_________u,Condition(function Trig_3_________uConditions))
+call TriggerAddAction(gg_trg_3_________u,function Trig_3_________uActions)
+endfunction
+function Trig_4_________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(3)))
+endfunction
+function Trig_4_________uActions takes nothing returns nothing
+set udg_SG4=(udg_SG4+1)
+endfunction
+function InitTrig_4_________u takes nothing returns nothing
+set gg_trg_4_________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_4_________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_4_________u,Condition(function Trig_4_________uConditions))
+call TriggerAddAction(gg_trg_4_________u,function Trig_4_________uActions)
+endfunction
+function Trig_5_________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(4)))
+endfunction
+function Trig_5_________uActions takes nothing returns nothing
+set udg_SG5=(udg_SG5+1)
+endfunction
+function InitTrig_5_________u takes nothing returns nothing
+set gg_trg_5_________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_5_________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_5_________u,Condition(function Trig_5_________uConditions))
+call TriggerAddAction(gg_trg_5_________u,function Trig_5_________uActions)
+endfunction
+function Trig_6_________uConditions takes nothing returns boolean
+return((GetOwningPlayer(GetKillingUnitBJ())==Player(5)))
+endfunction
+function Trig_6_________uActions takes nothing returns nothing
+set udg_SG6=(udg_SG6+1)
+endfunction
+function InitTrig_6_________u takes nothing returns nothing
+set gg_trg_6_________u=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_6_________u,EVENT_PLAYER_UNIT_DEATH)
+call TriggerAddCondition(gg_trg_6_________u,Condition(function Trig_6_________uConditions))
+call TriggerAddAction(gg_trg_6_________u,function Trig_6_________uActions)
+endfunction
+function Trig_MoveConditions takes nothing returns boolean
+return((GetOwningPlayer(GetTriggerUnit())==Player(5)))
+endfunction
+function Trig_MoveActions takes nothing returns nothing
+call IssuePointOrderLoc(GetTriggerUnit(),"attack",GetRandomLocInRect(gg_rct_Play_ALL))
+endfunction
+function InitTrig_Move takes nothing returns nothing
+set gg_trg_Move=CreateTrigger()
+call YDWETriggerRegisterEnterRectSimpleNull(gg_trg_Move,gg_rct_ALL)
+call TriggerAddCondition(gg_trg_Move,Condition(function Trig_MoveConditions))
+call TriggerAddAction(gg_trg_Move,function Trig_MoveActions)
+endfunction
+function Trig_Lv1Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u000',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'u000',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'u000',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv1 takes nothing returns nothing
+set gg_trg_Lv1=CreateTrigger()
+call DisableTrigger(gg_trg_Lv1)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv1,5.00)
+call TriggerAddAction(gg_trg_Lv1,function Trig_Lv1Actions)
+endfunction
+function Trig_Lv2Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(3,'u001',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'u001',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'u001',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv2 takes nothing returns nothing
+set gg_trg_Lv2=CreateTrigger()
+call DisableTrigger(gg_trg_Lv2)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv2,25.00)
+call TriggerAddAction(gg_trg_Lv2,function Trig_Lv2Actions)
+endfunction
+function Trig_Lv3Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(2,'u002',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'u002',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'u002',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv3 takes nothing returns nothing
+set gg_trg_Lv3=CreateTrigger()
+call DisableTrigger(gg_trg_Lv3)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv3,40.00)
+call TriggerAddAction(gg_trg_Lv3,function Trig_Lv3Actions)
+endfunction
+function Trig_Hero_1Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(6,'Usyl',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Hero_1 takes nothing returns nothing
+set gg_trg_Hero_1=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_1)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_1,250.00)
+call TriggerAddAction(gg_trg_Hero_1,function Trig_Hero_1Actions)
+endfunction
+function Trig_Hero_2Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'Nman',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+endfunction
+function InitTrig_Hero_2 takes nothing returns nothing
+set gg_trg_Hero_2=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_2)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_2,350.00)
+call TriggerAddAction(gg_trg_Hero_2,function Trig_Hero_2Actions)
+endfunction
+function Trig_Lv4Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u003',Player(5),GetUnitLoc(gg_unit_utod_0006),300.00)
+call CreateNUnitsAtLoc(5,'u003',Player(5),GetUnitLoc(gg_unit_utod_0005),300.00)
+endfunction
+function InitTrig_Lv4 takes nothing returns nothing
+set gg_trg_Lv4=CreateTrigger()
+call DisableTrigger(gg_trg_Lv4)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv4,15.00)
+call TriggerAddAction(gg_trg_Lv4,function Trig_Lv4Actions)
+endfunction
+function Trig_Lv5Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(8,'u004',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Lv5 takes nothing returns nothing
+set gg_trg_Lv5=CreateTrigger()
+call DisableTrigger(gg_trg_Lv5)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv5,20.00)
+call TriggerAddAction(gg_trg_Lv5,function Trig_Lv5Actions)
+endfunction
+function Trig_Lv6Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u006',Player(5),GetUnitLoc(gg_unit_uslh_0008),300.00)
+call CreateNUnitsAtLoc(5,'u006',Player(5),GetUnitLoc(gg_unit_uslh_0001),300.00)
+endfunction
+function InitTrig_Lv6 takes nothing returns nothing
+set gg_trg_Lv6=CreateTrigger()
+call DisableTrigger(gg_trg_Lv6)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv6,25.00)
+call TriggerAddAction(gg_trg_Lv6,function Trig_Lv6Actions)
+endfunction
+function Trig_Lv7Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u005',Player(5),GetUnitLoc(gg_unit_ubon_0015),300.00)
+call CreateNUnitsAtLoc(5,'u005',Player(5),GetUnitLoc(gg_unit_ubon_0007),300.00)
+endfunction
+function InitTrig_Lv7 takes nothing returns nothing
+set gg_trg_Lv7=CreateTrigger()
+call DisableTrigger(gg_trg_Lv7)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv7,30.00)
+call TriggerAddAction(gg_trg_Lv7,function Trig_Lv7Actions)
+endfunction
+function Trig_Lv11Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'n002',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'n002',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'n002',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv11 takes nothing returns nothing
+set gg_trg_Lv11=CreateTrigger()
+call DisableTrigger(gg_trg_Lv11)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv11,5.00)
+call TriggerAddAction(gg_trg_Lv11,function Trig_Lv11Actions)
+endfunction
+function Trig_Lv22Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(3,'n008',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n008',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n008',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv22 takes nothing returns nothing
+set gg_trg_Lv22=CreateTrigger()
+call DisableTrigger(gg_trg_Lv22)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv22,25.00)
+call TriggerAddAction(gg_trg_Lv22,function Trig_Lv22Actions)
+endfunction
+function Trig_Lv33Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(2,'n00A',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n00A',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n00A',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv33 takes nothing returns nothing
+set gg_trg_Lv33=CreateTrigger()
+call DisableTrigger(gg_trg_Lv33)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv33,40.00)
+call TriggerAddAction(gg_trg_Lv33,function Trig_Lv33Actions)
+endfunction
+function Trig_Hero_11Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(6,'E003',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Hero_11 takes nothing returns nothing
+set gg_trg_Hero_11=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_11)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_11,250.00)
+call TriggerAddAction(gg_trg_Hero_11,function Trig_Hero_11Actions)
+endfunction
+function Trig_Hero_22Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'N001',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+endfunction
+function InitTrig_Hero_22 takes nothing returns nothing
+set gg_trg_Hero_22=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_22)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_22,350.00)
+call TriggerAddAction(gg_trg_Hero_22,function Trig_Hero_22Actions)
+endfunction
+function Trig_Lv44Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'n007',Player(5),GetUnitLoc(gg_unit_utod_0006),300.00)
+call CreateNUnitsAtLoc(5,'n007',Player(5),GetUnitLoc(gg_unit_utod_0005),300.00)
+endfunction
+function InitTrig_Lv44 takes nothing returns nothing
+set gg_trg_Lv44=CreateTrigger()
+call DisableTrigger(gg_trg_Lv44)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv44,15.00)
+call TriggerAddAction(gg_trg_Lv44,function Trig_Lv44Actions)
+endfunction
+function Trig_Lv55Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(8,'u00B',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Lv55 takes nothing returns nothing
+set gg_trg_Lv55=CreateTrigger()
+call DisableTrigger(gg_trg_Lv55)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv55,20.00)
+call TriggerAddAction(gg_trg_Lv55,function Trig_Lv55Actions)
+endfunction
+function Trig_Lv66Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'o006',Player(5),GetUnitLoc(gg_unit_uslh_0008),300.00)
+call CreateNUnitsAtLoc(5,'o006',Player(5),GetUnitLoc(gg_unit_uslh_0001),300.00)
+endfunction
+function InitTrig_Lv66 takes nothing returns nothing
+set gg_trg_Lv66=CreateTrigger()
+call DisableTrigger(gg_trg_Lv66)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv66,26.00)
+call TriggerAddAction(gg_trg_Lv66,function Trig_Lv66Actions)
+endfunction
+function Trig_Lv77Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u00A',Player(5),GetUnitLoc(gg_unit_ubon_0015),300.00)
+call CreateNUnitsAtLoc(5,'u00A',Player(5),GetUnitLoc(gg_unit_ubon_0007),300.00)
+endfunction
+function InitTrig_Lv77 takes nothing returns nothing
+set gg_trg_Lv77=CreateTrigger()
+call DisableTrigger(gg_trg_Lv77)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv77,30.00)
+call TriggerAddAction(gg_trg_Lv77,function Trig_Lv77Actions)
+endfunction
+function Trig_Lv111Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'n003',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'n003',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(5,'n003',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv111 takes nothing returns nothing
+set gg_trg_Lv111=CreateTrigger()
+call DisableTrigger(gg_trg_Lv111)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv111,5.00)
+call TriggerAddAction(gg_trg_Lv111,function Trig_Lv111Actions)
+endfunction
+function Trig_Lv222Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(3,'n004',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n004',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n004',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv222 takes nothing returns nothing
+set gg_trg_Lv222=CreateTrigger()
+call DisableTrigger(gg_trg_Lv222)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv222,25.00)
+call TriggerAddAction(gg_trg_Lv222,function Trig_Lv222Actions)
+endfunction
+function Trig_Lv333Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(2,'n005',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n005',Player(5),GetUnitLoc(gg_unit_usep_0147),300.00)
+call TriggerSleepAction(0.30)
+call CreateNUnitsAtLoc(2,'n005',Player(5),GetUnitLoc(gg_unit_usep_0148),300.00)
+endfunction
+function InitTrig_Lv333 takes nothing returns nothing
+set gg_trg_Lv333=CreateTrigger()
+call DisableTrigger(gg_trg_Lv333)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv333,40.00)
+call TriggerAddAction(gg_trg_Lv333,function Trig_Lv333Actions)
+endfunction
+function Trig_Hero_111Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(6,'O00A',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Hero_111 takes nothing returns nothing
+set gg_trg_Hero_111=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_111)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_111,250.00)
+call TriggerAddAction(gg_trg_Hero_111,function Trig_Hero_111Actions)
+endfunction
+function Trig_Hero_222Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'E004',Player(5),GetUnitLoc(gg_unit_usep_0002),300.00)
+endfunction
+function InitTrig_Hero_222 takes nothing returns nothing
+set gg_trg_Hero_222=CreateTrigger()
+call DisableTrigger(gg_trg_Hero_222)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Hero_222,350.00)
+call TriggerAddAction(gg_trg_Hero_222,function Trig_Hero_222Actions)
+endfunction
+function Trig_Lv444Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'u008',Player(5),GetUnitLoc(gg_unit_utod_0006),300.00)
+call CreateNUnitsAtLoc(5,'u008',Player(5),GetUnitLoc(gg_unit_utod_0005),300.00)
+endfunction
+function InitTrig_Lv444 takes nothing returns nothing
+set gg_trg_Lv444=CreateTrigger()
+call DisableTrigger(gg_trg_Lv444)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv444,15.00)
+call TriggerAddAction(gg_trg_Lv444,function Trig_Lv444Actions)
+endfunction
+function Trig_Lv555Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(8,'u009',Player(5),GetUnitLoc(gg_unit_ugrv_0003),300.00)
+endfunction
+function InitTrig_Lv555 takes nothing returns nothing
+set gg_trg_Lv555=CreateTrigger()
+call DisableTrigger(gg_trg_Lv555)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv555,20.00)
+call TriggerAddAction(gg_trg_Lv555,function Trig_Lv555Actions)
+endfunction
+function Trig_Lv666Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'h00A',Player(5),GetUnitLoc(gg_unit_uslh_0008),300.00)
+call CreateNUnitsAtLoc(5,'h00A',Player(5),GetUnitLoc(gg_unit_uslh_0001),300.00)
+endfunction
+function InitTrig_Lv666 takes nothing returns nothing
+set gg_trg_Lv666=CreateTrigger()
+call DisableTrigger(gg_trg_Lv666)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv666,26.00)
+call TriggerAddAction(gg_trg_Lv666,function Trig_Lv666Actions)
+endfunction
+function Trig_Lv777Actions takes nothing returns nothing
+call CreateNUnitsAtLoc(5,'n000',Player(5),GetUnitLoc(gg_unit_ubon_0015),300.00)
+call CreateNUnitsAtLoc(5,'n000',Player(5),GetUnitLoc(gg_unit_ubon_0007),300.00)
+endfunction
+function InitTrig_Lv777 takes nothing returns nothing
+set gg_trg_Lv777=CreateTrigger()
+call DisableTrigger(gg_trg_Lv777)
+call TriggerRegisterTimerEventPeriodic(gg_trg_Lv777,30.00)
+call TriggerAddAction(gg_trg_Lv777,function Trig_Lv777Actions)
+endfunction
+function Trig_TimeFunc001A takes nothing returns nothing
+call AdjustPlayerStateBJ(5,GetEnumPlayer(),PLAYER_STATE_RESOURCE_GOLD)
+endfunction
+function Trig_TimeActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_TimeFunc001A)
+set udg_time=(udg_time+1)
+set udg_SL=CountUnitsInGroup((YDWEGetUnitsOfPlayerMatchingNull((Player(5)),null)))
+if((udg_SL>=245))then
+call DisableTrigger(gg_trg_Lv1)
+call DisableTrigger(gg_trg_Lv11)
+call DisableTrigger(gg_trg_Lv111)
+call DisableTrigger(gg_trg_Lv2)
+call DisableTrigger(gg_trg_Lv22)
+call DisableTrigger(gg_trg_Lv222)
+call DisableTrigger(gg_trg_Lv3)
+call DisableTrigger(gg_trg_Lv33)
+call DisableTrigger(gg_trg_Lv333)
+call DisableTrigger(gg_trg_Lv4)
+call DisableTrigger(gg_trg_Lv44)
+call DisableTrigger(gg_trg_Lv444)
+call DisableTrigger(gg_trg_Lv5)
+call DisableTrigger(gg_trg_Lv55)
+call DisableTrigger(gg_trg_Lv555)
+call DisableTrigger(gg_trg_Lv6)
+call DisableTrigger(gg_trg_Lv66)
+call DisableTrigger(gg_trg_Lv666)
+call DisableTrigger(gg_trg_Lv7)
+call DisableTrigger(gg_trg_Lv77)
+call DisableTrigger(gg_trg_Lv777)
+call DisableTrigger(gg_trg_Hero_1)
+call DisableTrigger(gg_trg_Hero_11)
+call DisableTrigger(gg_trg_Hero_111)
+call DisableTrigger(gg_trg_Hero_2)
+call DisableTrigger(gg_trg_Hero_22)
+call DisableTrigger(gg_trg_Hero_222)
+else
+if((udg_SL<=145))then
+if((udg_Open[0]==true))then
+call EnableTrigger(gg_trg_Lv1)
+call EnableTrigger(gg_trg_Lv2)
+call EnableTrigger(gg_trg_Lv3)
+call EnableTrigger(gg_trg_Hero_1)
+call EnableTrigger(gg_trg_Hero_2)
+else
+call DoNothing()
+endif
+if((udg_Open[1]==true))then
+call EnableTrigger(gg_trg_Lv4)
+call EnableTrigger(gg_trg_Lv5)
+call EnableTrigger(gg_trg_Lv6)
+call EnableTrigger(gg_trg_Lv7)
+else
+call DoNothing()
+endif
+if((udg_Open[2]==true))then
+call EnableTrigger(gg_trg_Lv11)
+call EnableTrigger(gg_trg_Lv22)
+call EnableTrigger(gg_trg_Lv33)
+call EnableTrigger(gg_trg_Hero_11)
+call EnableTrigger(gg_trg_Hero_22)
+else
+call DoNothing()
+endif
+if((udg_Open[3]==true))then
+call EnableTrigger(gg_trg_Lv44)
+call EnableTrigger(gg_trg_Lv55)
+call EnableTrigger(gg_trg_Lv66)
+call EnableTrigger(gg_trg_Lv77)
+else
+call DoNothing()
+endif
+if((udg_Open[3]==true))then
+call EnableTrigger(gg_trg_Lv111)
+call EnableTrigger(gg_trg_Lv222)
+call EnableTrigger(gg_trg_Lv333)
+call EnableTrigger(gg_trg_Hero_111)
+call EnableTrigger(gg_trg_Hero_222)
+else
+call DoNothing()
+endif
+if((udg_Open[4]==true))then
+call EnableTrigger(gg_trg_Lv444)
+call EnableTrigger(gg_trg_Lv555)
+call EnableTrigger(gg_trg_Lv666)
+call EnableTrigger(gg_trg_Lv777)
+else
+call DoNothing()
+endif
+else
+call DoNothing()
+endif
+endif
+if((udg_time==1))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200开|r|cFFFF7600始|r|cFFFF8900发|r|cFFFF9D00兵|r|cFFFFB100进|r|cFFFFC400攻|r|cFFFFD800。|r")
+set udg_Open[0]=true
+call EnableTrigger(gg_trg_Lv1)
+call EnableTrigger(gg_trg_Lv2)
+call EnableTrigger(gg_trg_Lv3)
+call EnableTrigger(gg_trg_Hero_1)
+call EnableTrigger(gg_trg_Hero_2)
+else
+call DoNothing()
+endif
+if((udg_time==700))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200研|r|cFFFF7600究|r|cFFFF8900出|r|cFFFF9D00新|r|cFFFFB100兵|r|cFFFFC400种|r|cFFFFD800。|r")
+set udg_Open[1]=true
+call EnableTrigger(gg_trg_Lv4)
+call EnableTrigger(gg_trg_Lv5)
+call EnableTrigger(gg_trg_Lv6)
+call EnableTrigger(gg_trg_Lv7)
+else
+call DoNothing()
+endif
+if((udg_time==1400))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200研|r|cFFFF7600究|r|cFFFF8900出|r|cFFFF9D00新|r|cFFFFB100兵|r|cFFFFC400种|r|cFFFFD800。|r")
+set udg_Open[0]=false
+set udg_Open[1]=false
+set udg_Open[2]=true
+call EnableTrigger(gg_trg_Lv11)
+call EnableTrigger(gg_trg_Lv22)
+call EnableTrigger(gg_trg_Lv33)
+call EnableTrigger(gg_trg_Hero_11)
+call EnableTrigger(gg_trg_Hero_22)
+else
+call DoNothing()
+endif
+if((udg_time==2100))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200研|r|cFFFF7600究|r|cFFFF8900出|r|cFFFF9D00新|r|cFFFFB100兵|r|cFFFFC400种|r|cFFFFD800。|r")
+set udg_Open[3]=true
+call EnableTrigger(gg_trg_Lv44)
+call EnableTrigger(gg_trg_Lv55)
+call EnableTrigger(gg_trg_Lv66)
+call EnableTrigger(gg_trg_Lv77)
+else
+call DoNothing()
+endif
+if((udg_time==2800))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200研|r|cFFFF7600究|r|cFFFF8900出|r|cFFFF9D00新|r|cFFFFB100兵|r|cFFFFC400种|r|cFFFFD800。|r")
+set udg_Open[2]=false
+set udg_Open[3]=false
+set udg_Open[4]=true
+call EnableTrigger(gg_trg_Lv111)
+call EnableTrigger(gg_trg_Lv222)
+call EnableTrigger(gg_trg_Lv333)
+call EnableTrigger(gg_trg_Hero_111)
+call EnableTrigger(gg_trg_Hero_222)
+else
+call DoNothing()
+endif
+if((udg_time==3500))then
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0000警|r|cFFFF1400告|r|cFFFF2700：|r|cFFFF3B00敌|r|cFFFF4E00人|r|cFFFF6200研|r|cFFFF7600究|r|cFFFF8900出|r|cFFFF9D00新|r|cFFFFB100兵|r|cFFFFC400种|r|cFFFFD800。|r")
+set udg_Open[5]=true
+call EnableTrigger(gg_trg_Lv444)
+call EnableTrigger(gg_trg_Lv555)
+call EnableTrigger(gg_trg_Lv666)
+call EnableTrigger(gg_trg_Lv777)
+else
+call DoNothing()
+endif
+endfunction
+function InitTrig_Time takes nothing returns nothing
+set gg_trg_Time=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_Time,1.00)
+call TriggerAddAction(gg_trg_Time,function Trig_TimeActions)
+endfunction
+function Trig____________________006Actions takes nothing returns nothing
+call EnableTrigger(gg_trg____________________u)
+endfunction
+function InitTrig____________________006 takes nothing returns nothing
+set gg_trg____________________006=CreateTrigger()
+call DisableTrigger(gg_trg____________________006)
+call TriggerRegisterTimerEventSingle(gg_trg____________________006,141.00)
+call TriggerAddAction(gg_trg____________________006,function Trig____________________006Actions)
+endfunction
+function Trig____________________uFunc003A takes nothing returns nothing
+call IssuePointOrderLoc(GetEnumUnit(),"attack",GetPlayerStartLocationLoc(ForcePickRandomPlayer(YDWEGetPlayersAlliesNull(Player(0)))))
+endfunction
+function Trig____________________uActions takes nothing returns nothing
+call CreateNUnitsAtLoc(20,'u007',Player(5),GetRectCenter(gg_rct_______u),bj_UNIT_FACING)
+call DisplayTimedTextToForce(GetPlayersAll(),10.00,"|cFFFF0033敌|r|cFFFF3333人|r|cFFFF6633发|r|cFF8DA676动|r|cFF1BE6B8偷|r|cFF37739C袭|r|cFF530080，|r|cFFA98040请|r|cFFFFFF00所|r|cFFFECF6C有|r|cFFFE9FD8玩|r|cFF8EAF6C家|r|cFF1FBF00注|r|cFF828C58意|r|cFFE55AAF升|r|cFFBC78A2级|r|cFF949596了|r|cFF88AAC4！|r|cFF7DBEF1！|r|cFF46909B！|r|cFF0F6145！|r|cFF2E7A3C！|r")
+call ForGroupBJ(GetLastCreatedGroup(),function Trig____________________uFunc003A)
+endfunction
+function InitTrig____________________u takes nothing returns nothing
+set gg_trg____________________u=CreateTrigger()
+call DisableTrigger(gg_trg____________________u)
+call TriggerRegisterTimerEventPeriodic(gg_trg____________________u,GetRandomReal(100.00,140.00))
+call TriggerAddAction(gg_trg____________________u,function Trig____________________uActions)
+endfunction
+function Trig___________________uConditions takes nothing returns boolean
+return((GetUnitTypeId(GetTriggerUnit())!='hpea')and(((GetOwningPlayer(GetTriggerUnit())==Player(0))or(GetOwningPlayer(GetTriggerUnit())==Player(1))or(GetOwningPlayer(GetTriggerUnit())==Player(2))or(GetOwningPlayer(GetTriggerUnit())==Player(3))or(GetOwningPlayer(GetTriggerUnit())==Player(4)))and(IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()),udg_nozidong)==false)))
+endfunction
+function Trig___________________uActions takes nothing returns nothing
+call IssuePointOrderLoc(GetTriggerUnit(),"attack",GetUnitLoc(gg_unit_unp2_0000))
+endfunction
+function InitTrig___________________u takes nothing returns nothing
+set gg_trg___________________u=CreateTrigger()
+call YDWETriggerRegisterEnterRectSimpleNull(gg_trg___________________u,gg_rct_Play_ALL)
+call TriggerAddCondition(gg_trg___________________u,Condition(function Trig___________________uConditions))
+call TriggerAddAction(gg_trg___________________u,function Trig___________________uActions)
+endfunction
+function Trig_footmanActions takes nothing returns nothing
+if((IsUnitAliveBJ(gg_unit_htow_0029)==true))then
+call CreateNUnitsAtLoc(1,'h000',Player(0),GetPlayerStartLocationLoc(Player(0)),bj_UNIT_FACING)
+else
+endif
+if((IsUnitAliveBJ(gg_unit_htow_0057)==true))then
+call CreateNUnitsAtLoc(1,'h000',Player(1),GetPlayerStartLocationLoc(Player(1)),bj_UNIT_FACING)
+else
+endif
+if((IsUnitAliveBJ(gg_unit_htow_0058)==true))then
+call CreateNUnitsAtLoc(1,'h000',Player(2),GetPlayerStartLocationLoc(Player(2)),bj_UNIT_FACING)
+else
+endif
+if((IsUnitAliveBJ(gg_unit_htow_0056)==true))then
+call CreateNUnitsAtLoc(1,'h000',Player(3),GetPlayerStartLocationLoc(Player(3)),bj_UNIT_FACING)
+else
+endif
+if((IsUnitAliveBJ(gg_unit_htow_0055)==true))then
+call CreateNUnitsAtLoc(1,'h000',Player(4),GetPlayerStartLocationLoc(Player(4)),bj_UNIT_FACING)
+else
+endif
+endfunction
+function InitTrig_footman takes nothing returns nothing
+set gg_trg_footman=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_footman,3.00)
+call TriggerAddAction(gg_trg_footman,function Trig_footmanActions)
+endfunction
+function Trig_biubiuFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'h001',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_biubiuFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('Rhri',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_biubiuFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_biubiuActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_biubiuFunc001A)
+endfunction
+function InitTrig_biubiu takes nothing returns nothing
+set gg_trg_biubiu=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_biubiu,5.00)
+call TriggerAddAction(gg_trg_biubiu,function Trig_biubiuActions)
+endfunction
+function Trig_LVfootmanFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'h006',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_LVfootmanFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R00I',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_LVfootmanFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_LVfootmanActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_LVfootmanFunc001A)
+endfunction
+function InitTrig_LVfootman takes nothing returns nothing
+set gg_trg_LVfootman=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_LVfootman,6.00)
+call TriggerAddAction(gg_trg_LVfootman,function Trig_LVfootmanActions)
+endfunction
+function Trig_knightFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'h002',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_knightFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R002',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_knightFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_knightActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_knightFunc001A)
+endfunction
+function InitTrig_knight takes nothing returns nothing
+set gg_trg_knight=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_knight,10.00)
+call TriggerAddAction(gg_trg_knight,function Trig_knightActions)
+endfunction
+function Trig_dragon_knightFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'h004',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_dragon_knightFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R00H',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_dragon_knightFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_dragon_knightActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_dragon_knightFunc001A)
+endfunction
+function InitTrig_dragon_knight takes nothing returns nothing
+set gg_trg_dragon_knight=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_dragon_knight,12.00)
+call TriggerAddAction(gg_trg_dragon_knight,function Trig_dragon_knightActions)
+endfunction
+function Trig_archerFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'e000',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_archerFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R00R',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_archerFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_archerActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_archerFunc001A)
+endfunction
+function InitTrig_archer takes nothing returns nothing
+set gg_trg_archer=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_archer,8.00)
+call TriggerAddAction(gg_trg_archer,function Trig_archerActions)
+endfunction
+function Trig_gimiraFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'e001',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_gimiraFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R00S',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_gimiraFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_gimiraActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_gimiraFunc001A)
+endfunction
+function InitTrig_gimira takes nothing returns nothing
+set gg_trg_gimira=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_gimira,22.00)
+call TriggerAddAction(gg_trg_gimira,function Trig_gimiraActions)
+endfunction
+function Trig_large_of_hillFunc001Func001Func003A takes nothing returns nothing
+call CreateUnitAtLoc(GetEnumPlayer(),'e002',GetUnitLoc(GetEnumUnit()),0)
+endfunction
+function Trig_large_of_hillFunc001A takes nothing returns nothing
+if((GetPlayerTechCountSimple('R00J',GetEnumPlayer())==1))then
+call ForGroupBJ(YDWEGetUnitsOfPlayerAndTypeIdNull(GetEnumPlayer(),'htow'),function Trig_large_of_hillFunc001Func001Func003A)
+else
+call DoNothing()
+endif
+endfunction
+function Trig_large_of_hillActions takes nothing returns nothing
+call ForForce(GetPlayersAll(),function Trig_large_of_hillFunc001A)
+endfunction
+function InitTrig_large_of_hill takes nothing returns nothing
+set gg_trg_large_of_hill=CreateTrigger()
+call TriggerRegisterTimerEventPeriodic(gg_trg_large_of_hill,20.00)
+call TriggerAddAction(gg_trg_large_of_hill,function Trig_large_of_hillActions)
+endfunction
+function Trig_no_AIConditions takes nothing returns boolean
+return((GetUnitTypeId(GetTrainedUnit())=='h008'))
+endfunction
+function Trig_no_AIActions takes nothing returns nothing
+call ForceAddPlayerSimple(GetOwningPlayer(GetTrainedUnit()),udg_nozidong)
+call RemoveUnit(GetTrainedUnit())
+call DisplayTimedTextToPlayer(GetTriggerPlayer(),0,0,30,"|cffff0000所有我麾下士兵听令！停止向敌军基地进军！|r")
+endfunction
+function InitTrig_no_AI takes nothing returns nothing
+set gg_trg_no_AI=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_no_AI,EVENT_PLAYER_UNIT_TRAIN_FINISH)
+call TriggerAddCondition(gg_trg_no_AI,Condition(function Trig_no_AIConditions))
+call TriggerAddAction(gg_trg_no_AI,function Trig_no_AIActions)
+endfunction
+function Trig_attackConditions takes nothing returns boolean
+return((GetUnitTypeId(GetTrainedUnit())=='h009'))
+endfunction
+function Trig_attackActions takes nothing returns nothing
+call ForceRemovePlayer(udg_nozidong,GetOwningPlayer(GetTrainedUnit()))
+call RemoveUnit(GetTrainedUnit())
+call DisplayTimedTextToForce(GetPlayersAll(),5.00,("【"+(GetPlayerName(GetTriggerPlayer())+("】|cffff0000所有我麾下兵营听令！开始对敌军基地发起进攻！|r"))))
+endfunction
+function InitTrig_attack takes nothing returns nothing
+set gg_trg_attack=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_attack,EVENT_PLAYER_UNIT_TRAIN_FINISH)
+call TriggerAddCondition(gg_trg_attack,Condition(function Trig_attackConditions))
+call TriggerAddAction(gg_trg_attack,function Trig_attackActions)
+endfunction
+function Trig_jiheConditions takes nothing returns boolean
+return((GetSpellAbilityId()=='A00T'))
+endfunction
+function Trig_jiheFunc001A takes nothing returns nothing
+call IssuePointOrderByIdLoc(GetEnumUnit(),851983,GetUnitLoc(gg_unit_unp2_0000))
+endfunction
+function Trig_jiheActions takes nothing returns nothing
+call ForGroupBJ((YDWEGetUnitsInRectMatchingNull((gg_rct_Play_ALL),null)),function Trig_jiheFunc001A)
+endfunction
+function InitTrig_jihe takes nothing returns nothing
+set gg_trg_jihe=CreateTrigger()
+call TriggerRegisterAnyUnitEventBJ(gg_trg_jihe,EVENT_PLAYER_UNIT_SPELL_CAST)
+call TriggerAddCondition(gg_trg_jihe,Condition(function Trig_jiheConditions))
+call TriggerAddAction(gg_trg_jihe,function Trig_jiheActions)
+endfunction
+function InitCustomTriggers takes nothing returns nothing
+call InitTrig_Map_Initialization()
+call InitTrig_Leave()
+call InitTrig_Win()
+call InitTrig_End()
+call InitTrig_Sound()
+call InitTrig_Huan()
+call InitTrig_Map_Random()
+call InitTrig_Map_Weather()
+call InitTrig_G()
+call InitTrig_______________u()
+call InitTrig_One()
+call InitTrig_Select()
+call InitTrig__________________u()
+call InitTrig_1_________u()
+call InitTrig_2__________u()
+call InitTrig_3_________u()
+call InitTrig_4_________u()
+call InitTrig_5_________u()
+call InitTrig_6_________u()
+call InitTrig_Move()
+call InitTrig_Lv1()
+call InitTrig_Lv2()
+call InitTrig_Lv3()
+call InitTrig_Hero_1()
+call InitTrig_Hero_2()
+call InitTrig_Lv4()
+call InitTrig_Lv5()
+call InitTrig_Lv6()
+call InitTrig_Lv7()
+call InitTrig_Lv11()
+call InitTrig_Lv22()
+call InitTrig_Lv33()
+call InitTrig_Hero_11()
+call InitTrig_Hero_22()
+call InitTrig_Lv44()
+call InitTrig_Lv55()
+call InitTrig_Lv66()
+call InitTrig_Lv77()
+call InitTrig_Lv111()
+call InitTrig_Lv222()
+call InitTrig_Lv333()
+call InitTrig_Hero_111()
+call InitTrig_Hero_222()
+call InitTrig_Lv444()
+call InitTrig_Lv555()
+call InitTrig_Lv666()
+call InitTrig_Lv777()
+call InitTrig_Time()
+call InitTrig____________________006()
+call InitTrig____________________u()
+call InitTrig___________________u()
+call InitTrig_footman()
+call InitTrig_biubiu()
+call InitTrig_LVfootman()
+call InitTrig_knight()
+call InitTrig_dragon_knight()
+call InitTrig_archer()
+call InitTrig_gimira()
+call InitTrig_large_of_hill()
+call InitTrig_no_AI()
+call InitTrig_attack()
+call InitTrig_jihe()
+endfunction
+function RunInitializationTriggers takes nothing returns nothing
+call ConditionalTriggerExecute(gg_trg_Map_Initialization)
+endfunction
+function InitCustomPlayerSlots takes nothing returns nothing
+call SetPlayerStartLocation(Player(0),0)
+call ForcePlayerStartLocation(Player(0),0)
+call SetPlayerColor(Player(0),ConvertPlayerColor(0))
+call SetPlayerRacePreference(Player(0),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(0),false)
+call SetPlayerController(Player(0),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(1),1)
+call ForcePlayerStartLocation(Player(1),1)
+call SetPlayerColor(Player(1),ConvertPlayerColor(1))
+call SetPlayerRacePreference(Player(1),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(1),false)
+call SetPlayerController(Player(1),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(2),2)
+call ForcePlayerStartLocation(Player(2),2)
+call SetPlayerColor(Player(2),ConvertPlayerColor(2))
+call SetPlayerRacePreference(Player(2),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(2),false)
+call SetPlayerController(Player(2),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(3),3)
+call ForcePlayerStartLocation(Player(3),3)
+call SetPlayerColor(Player(3),ConvertPlayerColor(3))
+call SetPlayerRacePreference(Player(3),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(3),false)
+call SetPlayerController(Player(3),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(4),4)
+call ForcePlayerStartLocation(Player(4),4)
+call SetPlayerColor(Player(4),ConvertPlayerColor(4))
+call SetPlayerRacePreference(Player(4),RACE_PREF_HUMAN)
+call SetPlayerRaceSelectable(Player(4),false)
+call SetPlayerController(Player(4),MAP_CONTROL_USER)
+call SetPlayerStartLocation(Player(5),5)
+call ForcePlayerStartLocation(Player(5),5)
+call SetPlayerColor(Player(5),ConvertPlayerColor(5))
+call SetPlayerRacePreference(Player(5),RACE_PREF_UNDEAD)
+call SetPlayerRaceSelectable(Player(5),false)
+call SetPlayerController(Player(5),MAP_CONTROL_COMPUTER)
+endfunction
+function InitCustomTeams takes nothing returns nothing
+call SetPlayerTeam(Player(0),0)
+call SetPlayerState(Player(0),PLAYER_STATE_ALLIED_VICTORY,1)
+call SetPlayerTeam(Player(1),0)
+call SetPlayerState(Player(1),PLAYER_STATE_ALLIED_VICTORY,1)
+call SetPlayerTeam(Player(2),0)
+call SetPlayerState(Player(2),PLAYER_STATE_ALLIED_VICTORY,1)
+call SetPlayerTeam(Player(3),0)
+call SetPlayerState(Player(3),PLAYER_STATE_ALLIED_VICTORY,1)
+call SetPlayerTeam(Player(4),0)
+call SetPlayerState(Player(4),PLAYER_STATE_ALLIED_VICTORY,1)
+call SetPlayerAllianceStateAllyBJ(Player(0),Player(1),true)
+call SetPlayerAllianceStateAllyBJ(Player(0),Player(2),true)
+call SetPlayerAllianceStateAllyBJ(Player(0),Player(3),true)
+call SetPlayerAllianceStateAllyBJ(Player(0),Player(4),true)
+call SetPlayerAllianceStateAllyBJ(Player(1),Player(0),true)
+call SetPlayerAllianceStateAllyBJ(Player(1),Player(2),true)
+call SetPlayerAllianceStateAllyBJ(Player(1),Player(3),true)
+call SetPlayerAllianceStateAllyBJ(Player(1),Player(4),true)
+call SetPlayerAllianceStateAllyBJ(Player(2),Player(0),true)
+call SetPlayerAllianceStateAllyBJ(Player(2),Player(1),true)
+call SetPlayerAllianceStateAllyBJ(Player(2),Player(3),true)
+call SetPlayerAllianceStateAllyBJ(Player(2),Player(4),true)
+call SetPlayerAllianceStateAllyBJ(Player(3),Player(0),true)
+call SetPlayerAllianceStateAllyBJ(Player(3),Player(1),true)
+call SetPlayerAllianceStateAllyBJ(Player(3),Player(2),true)
+call SetPlayerAllianceStateAllyBJ(Player(3),Player(4),true)
+call SetPlayerAllianceStateAllyBJ(Player(4),Player(0),true)
+call SetPlayerAllianceStateAllyBJ(Player(4),Player(1),true)
+call SetPlayerAllianceStateAllyBJ(Player(4),Player(2),true)
+call SetPlayerAllianceStateAllyBJ(Player(4),Player(3),true)
+call SetPlayerAllianceStateVisionBJ(Player(0),Player(1),true)
+call SetPlayerAllianceStateVisionBJ(Player(0),Player(2),true)
+call SetPlayerAllianceStateVisionBJ(Player(0),Player(3),true)
+call SetPlayerAllianceStateVisionBJ(Player(0),Player(4),true)
+call SetPlayerAllianceStateVisionBJ(Player(1),Player(0),true)
+call SetPlayerAllianceStateVisionBJ(Player(1),Player(2),true)
+call SetPlayerAllianceStateVisionBJ(Player(1),Player(3),true)
+call SetPlayerAllianceStateVisionBJ(Player(1),Player(4),true)
+call SetPlayerAllianceStateVisionBJ(Player(2),Player(0),true)
+call SetPlayerAllianceStateVisionBJ(Player(2),Player(1),true)
+call SetPlayerAllianceStateVisionBJ(Player(2),Player(3),true)
+call SetPlayerAllianceStateVisionBJ(Player(2),Player(4),true)
+call SetPlayerAllianceStateVisionBJ(Player(3),Player(0),true)
+call SetPlayerAllianceStateVisionBJ(Player(3),Player(1),true)
+call SetPlayerAllianceStateVisionBJ(Player(3),Player(2),true)
+call SetPlayerAllianceStateVisionBJ(Player(3),Player(4),true)
+call SetPlayerAllianceStateVisionBJ(Player(4),Player(0),true)
+call SetPlayerAllianceStateVisionBJ(Player(4),Player(1),true)
+call SetPlayerAllianceStateVisionBJ(Player(4),Player(2),true)
+call SetPlayerAllianceStateVisionBJ(Player(4),Player(3),true)
+call SetPlayerTeam(Player(5),1)
+call SetPlayerState(Player(5),PLAYER_STATE_ALLIED_VICTORY,1)
+endfunction
+function InitAllyPriorities takes nothing returns nothing
+call SetStartLocPrioCount(0,2)
+call SetStartLocPrio(0,0,1,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrio(0,1,3,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrioCount(1,2)
+call SetStartLocPrio(1,0,0,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrio(1,1,2,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrioCount(2,1)
+call SetStartLocPrio(2,0,1,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrioCount(3,2)
+call SetStartLocPrio(3,0,0,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrio(3,1,4,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrioCount(4,1)
+call SetStartLocPrio(4,0,3,MAP_LOC_PRIO_HIGH)
+call SetStartLocPrioCount(5,1)
+call SetStartLocPrio(5,0,4,MAP_LOC_PRIO_HIGH)
+endfunction
+function main takes nothing returns nothing
+call SetCameraBounds(-5504.0+GetCameraMargin(CAMERA_MARGIN_LEFT),-5632.0+GetCameraMargin(CAMERA_MARGIN_BOTTOM),6016.0-GetCameraMargin(CAMERA_MARGIN_RIGHT),9216.0-GetCameraMargin(CAMERA_MARGIN_TOP),-5504.0+GetCameraMargin(CAMERA_MARGIN_LEFT),9216.0-GetCameraMargin(CAMERA_MARGIN_TOP),6016.0-GetCameraMargin(CAMERA_MARGIN_RIGHT),-5632.0+GetCameraMargin(CAMERA_MARGIN_BOTTOM))
+call SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl","Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
+call NewSoundEnvironment("Default")
+call SetAmbientDaySound("LordaeronSummerDay")
+call SetAmbientNightSound("LordaeronSummerNight")
+call SetMapMusic("Music",true,0)
+call InitSounds()
+call CreateRegions()
+call CreateAllUnits()
+call InitBlizzard()
+call InitGlobals()
+call InitCustomTriggers()
+call ConditionalTriggerExecute(gg_trg_Map_Initialization)
+endfunction
+function config takes nothing returns nothing
+call SetMapName("|cFFFF0000步兵大战 测试 V1.2|r")
+call SetMapDescription("|cFFFF0000有|r|cFF802080问|r|cFF0041FF题|r|cFF0E94DC请|r|cFF1BE6B8联|r|cFF37739C系|r|cFF530080Q|r|cFFA98040Q|r|cFFFFFF00:|r|cFFFECF6C5|r|cFFFE9FD83|r|cFF8EAF6C0|r|cFF1FBF000|r|cFF828C582|r|cFFE55AAF6|r|cFFBC78A25|r|cFF9495965|r|cFF88AAC41|r")
+call SetPlayers(6)
+call SetTeams(6)
+call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
+call DefineStartLocation(0,-64.0,-4480.0)
+call DefineStartLocation(1,-2048.0,-4416.0)
+call DefineStartLocation(2,-4096.0,-4416.0)
+call DefineStartLocation(3,2048.0,-4416.0)
+call DefineStartLocation(4,4096.0,-4416.0)
+call DefineStartLocation(5,128.0,4992.0)
+call InitCustomPlayerSlots()
+call InitCustomTeams()
+call InitAllyPriorities()
+endfunction
